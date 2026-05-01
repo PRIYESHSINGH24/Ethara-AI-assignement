@@ -11,6 +11,246 @@
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex%20Admin",
       "bio": "",
       "isActive": true
+    },
+    {
+      "id": "e10740e1-76f0-4639-b27b-96a62ce05af1",
+      "createdAt": "2026-05-01T14:57:01.174Z",
+      "updatedAt": "2026-05-01T14:57:02.508Z",
+      "name": "Updated Admin",
+      "email": "testadmin@qphoria.dev",
+      "password": "$2b$12$5aFw9zNJ7/lvEFjqkv1n0uk1N29keGIeOYXt0xrDjgZ7shC7Sv6yO",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "I am the admin",
+      "isActive": true
+    },
+    {
+      "id": "987720d9-d81c-4b83-a9a2-1be44dbe66b5",
+      "createdAt": "2026-05-01T14:57:15.889Z",
+      "updatedAt": "2026-05-01T14:57:15.889Z",
+      "name": "Test Admin",
+      "email": "diagadmin@test.com",
+      "password": "$2b$12$Ytmdm57uoBj4aNeIpcg2ouD4fj1S1P2N5obpFGqvT18QHgLngoDQS",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "965910db-00aa-4dec-bec2-67abe8bd62f4",
+      "createdAt": "2026-05-01T15:37:10.449Z",
+      "updatedAt": "2026-05-01T15:37:10.450Z",
+      "name": "Test Admin",
+      "email": "admin_1777649829943@test.com",
+      "password": "$2b$12$y4HBudKCMQ/1VDHaLmylm.q/pPf5x65V2AHr3aFTWfeGt/HUJmAZO",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "ee895b94-c893-43a3-b0d5-eb963c88146b",
+      "createdAt": "2026-05-01T15:37:27.794Z",
+      "updatedAt": "2026-05-01T15:37:27.794Z",
+      "name": "Test Admin",
+      "email": "admin_1777649847316@test.com",
+      "password": "$2b$12$dyxsU1728ysExzMnQN/oT.oTaYgYxa/XohGkoCcaGMD32vRxYD4FK",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "845333ed-5861-4110-8d56-bea25ac87f0f",
+      "createdAt": "2026-05-01T15:37:36.799Z",
+      "updatedAt": "2026-05-01T15:37:36.800Z",
+      "name": "Test Member",
+      "email": "member_1777649856313@test.com",
+      "password": "$2b$12$7NoLjP9Sy9z44OzeFh6Wfec502gYR2PPXCSP28zvVkN35DHPb5j6i",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "1157c0af-b71a-4edd-83bf-ecd0813212be",
+      "createdAt": "2026-05-01T15:38:17.066Z",
+      "updatedAt": "2026-05-01T15:38:17.066Z",
+      "name": "Test Admin",
+      "email": "admin_1777649896582@test.com",
+      "password": "$2b$12$h.PGFrIa9gKHDI22g4/WkOeEeFePDDdYdLvQ0gUp1otj5Dp7SZYZC",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "e989e08a-b61d-4941-bdde-c50be1daa160",
+      "createdAt": "2026-05-01T15:38:37.865Z",
+      "updatedAt": "2026-05-01T15:38:37.866Z",
+      "name": "Test Admin",
+      "email": "admin_1777649917380@test.com",
+      "password": "$2b$12$4T4lhuy5NBFr1/a3u0LX5OBssgDoWtfYEreZUPadRVRUw0Gd21khi",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "a68808fe-ba11-45de-9df9-29b4337349be",
+      "createdAt": "2026-05-01T15:38:38.829Z",
+      "updatedAt": "2026-05-01T15:38:38.829Z",
+      "name": "Test Member",
+      "email": "member_1777649917380@test.com",
+      "password": "$2b$12$HXl99.2a1eBK/OnYSJ3xpuvJwFC1K7lwm5kbOrb2LlM.ee4gy3zg.",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "createdAt": "2026-05-01T15:39:22.282Z",
+      "updatedAt": "2026-05-01T15:39:23.660Z",
+      "name": "Updated Admin",
+      "email": "admin_1777649962110@test.com",
+      "password": "$2b$10$LqwY3jJ/wsJwf.fhT/y8mu4I4ubp0TOf.yMYKFrm4nMYDfKXaRP/.",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "Testing bio",
+      "isActive": true
+    },
+    {
+      "id": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "createdAt": "2026-05-01T15:39:22.916Z",
+      "updatedAt": "2026-05-01T15:39:22.916Z",
+      "name": "Test Member",
+      "email": "member_1777649962110@test.com",
+      "password": "$2b$10$J1uSKlYCGMZoHA1f/mgL9.FY4husPFwq6mmJL28chPh3zAzZcdcl6",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26",
+      "createdAt": "2026-05-01T15:39:46.358Z",
+      "updatedAt": "2026-05-01T15:39:47.741Z",
+      "name": "Updated Admin",
+      "email": "admin_1777649986187@test.com",
+      "password": "$2b$10$GJ/7SbHtVTDll74sVCOu4.sbYS2pPwfsBPwmOiqRaloADh50GgSaq",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "Testing bio",
+      "isActive": true
+    },
+    {
+      "id": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "createdAt": "2026-05-01T15:39:46.994Z",
+      "updatedAt": "2026-05-01T15:39:46.994Z",
+      "name": "Test Member",
+      "email": "member_1777649986187@test.com",
+      "password": "$2b$10$S07ffgZhwriRpAlqA8jZNuTwnkGEPl5oIhq7dqireZqEX2EdHJ1Jm",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "7d5473ca-0cbe-467e-baf9-8e0616171b6e",
+      "createdAt": "2026-05-01T15:40:08.766Z",
+      "updatedAt": "2026-05-01T15:40:11.022Z",
+      "name": "Updated Admin",
+      "email": "admin_1777650008228@test.com",
+      "password": "$2b$10$WLkYB2TzD3McVy3hkBTeuu8oSnVSJA.I/MJVlRbjFM7W2hDwdx5v.",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "Testing bio",
+      "isActive": true
+    },
+    {
+      "id": "3eb50e80-188c-4b09-8a3f-9320293e7710",
+      "createdAt": "2026-05-01T15:40:09.660Z",
+      "updatedAt": "2026-05-01T15:40:09.660Z",
+      "name": "Test Member",
+      "email": "member_1777650008228@test.com",
+      "password": "$2b$10$5TZAaoVRexbasg25mfExW.E77F0v1MeMDOm7eWdFlxkBF5YjhpLsC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "0f311029-76e1-489e-8277-7f20a2f51802",
+      "createdAt": "2026-05-01T15:40:45.479Z",
+      "updatedAt": "2026-05-01T15:40:47.684Z",
+      "name": "Updated Admin",
+      "email": "admin_1777650044947@test.com",
+      "password": "$2b$10$ofohfbqAdrbG.J5FeKjXJeq6hwf6/7W.yRymGPl8olD8xrm6hVkpe",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "Testing bio",
+      "isActive": true
+    },
+    {
+      "id": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "createdAt": "2026-05-01T15:40:46.343Z",
+      "updatedAt": "2026-05-01T15:40:46.343Z",
+      "name": "Test Member",
+      "email": "member_1777650044947@test.com",
+      "password": "$2b$10$/WbVBPGkPt20DF1p17npmehaWJp11kVeELbFP8Hsu4bBNe/z6jZ7S",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "75b52aca-e7f4-4556-86b1-2e9ef7ebc542",
+      "createdAt": "2026-05-01T15:40:52.811Z",
+      "updatedAt": "2026-05-01T15:40:52.811Z",
+      "name": "Outsider",
+      "email": "outsider_1777650044947@test.com",
+      "password": "$2b$10$ZbTp4qSX27LWy2oGsHlfO.lD21pJyhKs4IACFTKQMNkB1/9YDKS5S",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Outsider",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "6b5db856-71dc-4ad5-be6d-dda8bfbd1f96",
+      "createdAt": "2026-05-01T17:08:07.619Z",
+      "updatedAt": "2026-05-01T17:08:09.821Z",
+      "name": "Updated Admin",
+      "email": "admin_1777655287076@test.com",
+      "password": "$2b$10$7B78KJ5OCvlVEKNMzqYMGO.mgJYzF6Sde30cBxqfn0rpaMOr3NNEK",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Admin",
+      "bio": "Testing bio",
+      "isActive": true
+    },
+    {
+      "id": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "createdAt": "2026-05-01T17:08:08.481Z",
+      "updatedAt": "2026-05-01T17:08:08.481Z",
+      "name": "Test Member",
+      "email": "member_1777655287076@test.com",
+      "password": "$2b$10$G0l9cH8gKi.Sf/Qlph2bxernR86uz9FESJ24qcN3DElcypQCGZznq",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Test%20Member",
+      "bio": "",
+      "isActive": true
+    },
+    {
+      "id": "58addb7e-cf25-4f5c-912f-c39e4d7222db",
+      "createdAt": "2026-05-01T17:08:14.954Z",
+      "updatedAt": "2026-05-01T17:08:14.954Z",
+      "name": "Outsider",
+      "email": "outsider_1777655287076@test.com",
+      "password": "$2b$10$o5MVIL84HdkJ/IBhWDRNBOSViztNXrmH/guWcERVfsxq3nHTDSFZq",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Outsider",
+      "bio": "",
+      "isActive": true
     }
   ],
   "projects": [
@@ -25,11 +265,218 @@
       "priority": "high",
       "status": "active",
       "createdBy": "00690202-199f-4576-a156-63e16eb8f092"
+    },
+    {
+      "id": "d492a843-b6df-4d51-8bc5-bf6951a1556b",
+      "createdAt": "2026-05-01T14:57:04.388Z",
+      "updatedAt": "2026-05-01T14:57:04.388Z",
+      "name": "Private Project",
+      "description": "Not for members",
+      "color": "#fd79a8",
+      "dueDate": null,
+      "priority": "low",
+      "status": "active",
+      "createdBy": "e10740e1-76f0-4639-b27b-96a62ce05af1"
+    },
+    {
+      "id": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "createdAt": "2026-05-01T15:39:23.666Z",
+      "updatedAt": "2026-05-01T15:39:23.674Z",
+      "name": "Updated Project",
+      "status": "active",
+      "createdBy": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae"
+    },
+    {
+      "id": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "createdAt": "2026-05-01T15:39:47.748Z",
+      "updatedAt": "2026-05-01T15:39:47.756Z",
+      "name": "Updated Project",
+      "status": "active",
+      "createdBy": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26"
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": "fa98ca64-8240-4761-aafd-aef5c25230e9",
+      "createdAt": "2026-05-01T15:39:23.679Z",
+      "updatedAt": "2026-05-01T15:39:23.683Z",
+      "title": "Test Task",
+      "description": "Auto test task",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "assigneeId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "createdBy": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "priority": "high",
+      "status": "done",
+      "dueDate": "2026-05-10",
+      "tags": [
+        "testing",
+        "automation"
+      ],
+      "estimatedHours": 4,
+      "completedAt": "2026-05-01T15:39:23.683Z"
+    },
+    {
+      "id": "78e31dd1-91bc-4b46-b8de-d6490246c527",
+      "createdAt": "2026-05-01T15:39:47.760Z",
+      "updatedAt": "2026-05-01T15:39:47.763Z",
+      "title": "Test Task",
+      "description": "Auto test task",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "assigneeId": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "createdBy": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26",
+      "priority": "high",
+      "status": "in_progress",
+      "dueDate": "2026-05-10",
+      "tags": [
+        "testing",
+        "automation"
+      ],
+      "estimatedHours": 4,
+      "completedAt": null
+    }
+  ],
   "comments": [],
-  "notifications": [],
+  "notifications": [
+    {
+      "id": "d4e2d09b-067d-4541-882c-fdecf858ce42",
+      "createdAt": "2026-05-01T15:39:23.670Z",
+      "updatedAt": "2026-05-01T15:39:23.670Z",
+      "userId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "type": "project_invite",
+      "message": "You've been added to project \"Test Project\"",
+      "read": false,
+      "link": "/projects/a19dfb92-8c92-4b85-8577-7acca1a822d3"
+    },
+    {
+      "id": "b4a42080-c9a7-4776-89d0-f78943c4ace6",
+      "createdAt": "2026-05-01T15:39:23.679Z",
+      "updatedAt": "2026-05-01T15:39:23.679Z",
+      "userId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "type": "task_assigned",
+      "message": "You've been assigned to \"Test Task\"",
+      "read": false,
+      "link": "/tasks/fa98ca64-8240-4761-aafd-aef5c25230e9",
+      "taskId": "fa98ca64-8240-4761-aafd-aef5c25230e9"
+    },
+    {
+      "id": "6dfc4e02-abb0-4394-b143-6c2b40904bb8",
+      "createdAt": "2026-05-01T15:39:23.683Z",
+      "updatedAt": "2026-05-01T15:39:23.683Z",
+      "userId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "type": "task_updated",
+      "message": "Task \"Test Task\" status changed to done",
+      "read": false,
+      "link": "/tasks/fa98ca64-8240-4761-aafd-aef5c25230e9",
+      "taskId": "fa98ca64-8240-4761-aafd-aef5c25230e9"
+    },
+    {
+      "id": "39da94d2-3d4a-4d03-b7f7-d8f5e51f9bc4",
+      "createdAt": "2026-05-01T15:39:47.752Z",
+      "updatedAt": "2026-05-01T15:39:47.752Z",
+      "userId": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "type": "project_invite",
+      "message": "You've been added to project \"Test Project\"",
+      "read": false,
+      "link": "/projects/03c05485-19d3-4a8c-b5c1-b7c3e2e903d9"
+    },
+    {
+      "id": "d8c3c559-6fee-44c3-8339-892aec5ca5c4",
+      "createdAt": "2026-05-01T15:39:47.760Z",
+      "updatedAt": "2026-05-01T15:39:47.760Z",
+      "userId": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "type": "task_assigned",
+      "message": "You've been assigned to \"Test Task\"",
+      "read": false,
+      "link": "/tasks/78e31dd1-91bc-4b46-b8de-d6490246c527",
+      "taskId": "78e31dd1-91bc-4b46-b8de-d6490246c527"
+    },
+    {
+      "id": "6719fab2-7590-4d78-a704-95150b7009bf",
+      "createdAt": "2026-05-01T15:40:48.430Z",
+      "updatedAt": "2026-05-01T15:40:51.842Z",
+      "userId": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "type": "project_invite",
+      "message": "You've been added to project \"Test Project\"",
+      "read": true,
+      "link": "/projects/3460ff81-8241-47ab-89c3-c7cbc3909d7a"
+    },
+    {
+      "id": "1f7ea993-468c-43b0-9dff-a3325b130b49",
+      "createdAt": "2026-05-01T15:40:49.792Z",
+      "updatedAt": "2026-05-01T15:40:51.842Z",
+      "userId": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "type": "task_assigned",
+      "message": "You've been assigned to \"Test Task\"",
+      "read": true,
+      "link": "/tasks/e79233eb-f1d4-4993-a445-a5ced62d1b33",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "0d1ef02a-33e8-43db-8fac-a1e1e09fb401",
+      "createdAt": "2026-05-01T15:40:50.321Z",
+      "updatedAt": "2026-05-01T15:40:51.843Z",
+      "userId": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "type": "task_updated",
+      "message": "Task \"Test Task\" status changed to done",
+      "read": true,
+      "link": "/tasks/e79233eb-f1d4-4993-a445-a5ced62d1b33",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "d8114c46-6f88-400b-8f8d-6e9e6d5a8bc1",
+      "createdAt": "2026-05-01T15:40:50.598Z",
+      "updatedAt": "2026-05-01T15:40:51.718Z",
+      "userId": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "type": "task_updated",
+      "message": "Task \"Test Task\" status changed to in_progress",
+      "read": true,
+      "link": "/tasks/e79233eb-f1d4-4993-a445-a5ced62d1b33",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "c1cded6d-6c48-4568-b4e2-e89de8a0b221",
+      "createdAt": "2026-05-01T17:08:10.569Z",
+      "updatedAt": "2026-05-01T17:08:13.983Z",
+      "userId": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "type": "project_invite",
+      "message": "You've been added to project \"Test Project\"",
+      "read": true,
+      "link": "/projects/3d430383-e301-47af-a34f-fc2facf657d9"
+    },
+    {
+      "id": "94ac9463-4333-40e6-9493-a0ec0b30a3ed",
+      "createdAt": "2026-05-01T17:08:11.942Z",
+      "updatedAt": "2026-05-01T17:08:13.983Z",
+      "userId": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "type": "task_assigned",
+      "message": "You've been assigned to \"Test Task\"",
+      "read": true,
+      "link": "/tasks/f298c136-4c9d-443d-b0ab-893e2194b170",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    },
+    {
+      "id": "afb2c785-a0d7-477b-911b-5b9b459fae38",
+      "createdAt": "2026-05-01T17:08:12.466Z",
+      "updatedAt": "2026-05-01T17:08:13.984Z",
+      "userId": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "type": "task_updated",
+      "message": "Task \"Test Task\" status changed to done",
+      "read": true,
+      "link": "/tasks/f298c136-4c9d-443d-b0ab-893e2194b170",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    },
+    {
+      "id": "40202e56-9092-41f7-b8d8-754d3d8a5309",
+      "createdAt": "2026-05-01T17:08:12.740Z",
+      "updatedAt": "2026-05-01T17:08:13.857Z",
+      "userId": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "type": "task_updated",
+      "message": "Task \"Test Task\" status changed to in_progress",
+      "read": true,
+      "link": "/tasks/f298c136-4c9d-443d-b0ab-893e2194b170",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    }
+  ],
   "projectMembers": [
     {
       "id": "e0be9cfd-6fde-4c24-9cdf-235b12d00ab5",
@@ -38,6 +485,46 @@
       "projectId": "47125eab-8f92-437f-be1d-71d265ea1a77",
       "userId": "00690202-199f-4576-a156-63e16eb8f092",
       "role": "admin"
+    },
+    {
+      "id": "69a84084-58de-4f63-9fef-4e176f6b9567",
+      "createdAt": "2026-05-01T14:57:04.388Z",
+      "updatedAt": "2026-05-01T14:57:04.388Z",
+      "projectId": "d492a843-b6df-4d51-8bc5-bf6951a1556b",
+      "userId": "e10740e1-76f0-4639-b27b-96a62ce05af1",
+      "role": "admin"
+    },
+    {
+      "id": "85342d3c-234e-47ca-bdca-142de8657e5f",
+      "createdAt": "2026-05-01T15:39:23.667Z",
+      "updatedAt": "2026-05-01T15:39:23.667Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "role": "admin"
+    },
+    {
+      "id": "b96563e9-96c6-4dd2-9ae0-4433fcf49be4",
+      "createdAt": "2026-05-01T15:39:23.670Z",
+      "updatedAt": "2026-05-01T15:39:23.670Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "role": "member"
+    },
+    {
+      "id": "1153a43e-6b32-4e2e-8b2b-40b659450cb7",
+      "createdAt": "2026-05-01T15:39:47.748Z",
+      "updatedAt": "2026-05-01T15:39:47.748Z",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "userId": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26",
+      "role": "admin"
+    },
+    {
+      "id": "beb3b740-fb34-4b44-8ea3-e05dc3b31d20",
+      "createdAt": "2026-05-01T15:39:47.751Z",
+      "updatedAt": "2026-05-01T15:39:47.751Z",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "userId": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "role": "member"
     }
   ],
   "activityLogs": [
@@ -49,6 +536,181 @@
       "userId": "00690202-199f-4576-a156-63e16eb8f092",
       "action": "project_created",
       "details": "Project \"Website Redesign\" created"
+    },
+    {
+      "id": "b158c693-7a09-4a46-9d70-cbbaa2b08419",
+      "createdAt": "2026-05-01T14:57:04.389Z",
+      "updatedAt": "2026-05-01T14:57:04.389Z",
+      "projectId": "d492a843-b6df-4d51-8bc5-bf6951a1556b",
+      "userId": "e10740e1-76f0-4639-b27b-96a62ce05af1",
+      "action": "project_created",
+      "details": "Project \"Private Project\" created"
+    },
+    {
+      "id": "1cfa9c5c-ba1b-4f74-967a-f190cdce3630",
+      "createdAt": "2026-05-01T15:39:23.667Z",
+      "updatedAt": "2026-05-01T15:39:23.667Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "action": "project_created",
+      "details": "Project \"Test Project\" created"
+    },
+    {
+      "id": "5368df16-45b1-44ec-9415-a43b6cb439ae",
+      "createdAt": "2026-05-01T15:39:23.679Z",
+      "updatedAt": "2026-05-01T15:39:23.679Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "action": "task_created",
+      "details": "Task \"Test Task\" created",
+      "taskId": "fa98ca64-8240-4761-aafd-aef5c25230e9"
+    },
+    {
+      "id": "95e32e32-04e9-4576-b6e5-7ef04babb1e5",
+      "createdAt": "2026-05-01T15:39:23.681Z",
+      "updatedAt": "2026-05-01T15:39:23.681Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "f5e41d59-ff0f-4832-9394-1c94b5710871",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "fa98ca64-8240-4761-aafd-aef5c25230e9"
+    },
+    {
+      "id": "b28b753b-d69b-4418-aa1b-414fcc82ca18",
+      "createdAt": "2026-05-01T15:39:23.683Z",
+      "updatedAt": "2026-05-01T15:39:23.683Z",
+      "projectId": "a19dfb92-8c92-4b85-8577-7acca1a822d3",
+      "userId": "0b1cc2fe-095b-4a66-879d-aed7ee2655ae",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to done",
+      "taskId": "fa98ca64-8240-4761-aafd-aef5c25230e9"
+    },
+    {
+      "id": "9ca0f277-db24-4272-8795-f0d759e08663",
+      "createdAt": "2026-05-01T15:39:47.749Z",
+      "updatedAt": "2026-05-01T15:39:47.749Z",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "userId": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26",
+      "action": "project_created",
+      "details": "Project \"Test Project\" created"
+    },
+    {
+      "id": "017a0dcc-4e1f-4a8b-87db-5235dd1ad5e5",
+      "createdAt": "2026-05-01T15:39:47.761Z",
+      "updatedAt": "2026-05-01T15:39:47.761Z",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "userId": "c36f81b0-dcfd-4198-9c6c-e7c36cce0d26",
+      "action": "task_created",
+      "details": "Task \"Test Task\" created",
+      "taskId": "78e31dd1-91bc-4b46-b8de-d6490246c527"
+    },
+    {
+      "id": "36f27555-b7d8-44ac-b42a-c422ef369135",
+      "createdAt": "2026-05-01T15:39:47.763Z",
+      "updatedAt": "2026-05-01T15:39:47.763Z",
+      "projectId": "03c05485-19d3-4a8c-b5c1-b7c3e2e903d9",
+      "userId": "71051dfb-640a-45f8-b443-c0dc1f0b7f25",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "78e31dd1-91bc-4b46-b8de-d6490246c527"
+    },
+    {
+      "id": "97a84f4d-ea30-4b8f-bf96-4213058c88b6",
+      "createdAt": "2026-05-01T15:40:48.181Z",
+      "updatedAt": "2026-05-01T15:40:48.181Z",
+      "projectId": "3460ff81-8241-47ab-89c3-c7cbc3909d7a",
+      "userId": "0f311029-76e1-489e-8277-7f20a2f51802",
+      "action": "project_created",
+      "details": "Project \"Test Project\" created"
+    },
+    {
+      "id": "260e1a6a-a8df-46e0-8d53-17c15abfc1d2",
+      "createdAt": "2026-05-01T15:40:49.793Z",
+      "updatedAt": "2026-05-01T15:40:49.793Z",
+      "projectId": "3460ff81-8241-47ab-89c3-c7cbc3909d7a",
+      "userId": "0f311029-76e1-489e-8277-7f20a2f51802",
+      "action": "task_created",
+      "details": "Task \"Test Task\" created",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "3faa1063-15a6-4279-87bc-fcd262216468",
+      "createdAt": "2026-05-01T15:40:50.042Z",
+      "updatedAt": "2026-05-01T15:40:50.042Z",
+      "projectId": "3460ff81-8241-47ab-89c3-c7cbc3909d7a",
+      "userId": "5deb5313-29e6-40d4-90cd-f0afc31420a9",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "9f88410c-658d-41c6-9bf6-b9b26da51026",
+      "createdAt": "2026-05-01T15:40:50.319Z",
+      "updatedAt": "2026-05-01T15:40:50.319Z",
+      "projectId": "3460ff81-8241-47ab-89c3-c7cbc3909d7a",
+      "userId": "0f311029-76e1-489e-8277-7f20a2f51802",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to done",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "235a0c4f-a19c-41ca-a3b7-34e634dc5d19",
+      "createdAt": "2026-05-01T15:40:50.597Z",
+      "updatedAt": "2026-05-01T15:40:50.597Z",
+      "projectId": "3460ff81-8241-47ab-89c3-c7cbc3909d7a",
+      "userId": "0f311029-76e1-489e-8277-7f20a2f51802",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "e79233eb-f1d4-4993-a445-a5ced62d1b33"
+    },
+    {
+      "id": "be8c8d13-4beb-4882-871a-29709a4ebf29",
+      "createdAt": "2026-05-01T17:08:10.320Z",
+      "updatedAt": "2026-05-01T17:08:10.320Z",
+      "projectId": "3d430383-e301-47af-a34f-fc2facf657d9",
+      "userId": "6b5db856-71dc-4ad5-be6d-dda8bfbd1f96",
+      "action": "project_created",
+      "details": "Project \"Test Project\" created"
+    },
+    {
+      "id": "54690dca-4703-4a46-a18e-49fde7dd7880",
+      "createdAt": "2026-05-01T17:08:11.942Z",
+      "updatedAt": "2026-05-01T17:08:11.942Z",
+      "projectId": "3d430383-e301-47af-a34f-fc2facf657d9",
+      "userId": "6b5db856-71dc-4ad5-be6d-dda8bfbd1f96",
+      "action": "task_created",
+      "details": "Task \"Test Task\" created",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    },
+    {
+      "id": "775c58b7-4d14-451e-b50f-832a161a041b",
+      "createdAt": "2026-05-01T17:08:12.191Z",
+      "updatedAt": "2026-05-01T17:08:12.191Z",
+      "projectId": "3d430383-e301-47af-a34f-fc2facf657d9",
+      "userId": "9b616622-7319-4ce2-9589-b6364c22e009",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    },
+    {
+      "id": "b769c088-3683-4af4-8584-f4ecd9d80827",
+      "createdAt": "2026-05-01T17:08:12.466Z",
+      "updatedAt": "2026-05-01T17:08:12.466Z",
+      "projectId": "3d430383-e301-47af-a34f-fc2facf657d9",
+      "userId": "6b5db856-71dc-4ad5-be6d-dda8bfbd1f96",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to done",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
+    },
+    {
+      "id": "85d18893-a1cf-40ac-9393-5ab71cf0bb9e",
+      "createdAt": "2026-05-01T17:08:12.740Z",
+      "updatedAt": "2026-05-01T17:08:12.740Z",
+      "projectId": "3d430383-e301-47af-a34f-fc2facf657d9",
+      "userId": "6b5db856-71dc-4ad5-be6d-dda8bfbd1f96",
+      "action": "task_status_changed",
+      "details": "Task \"Test Task\" moved to in_progress",
+      "taskId": "f298c136-4c9d-443d-b0ab-893e2194b170"
     }
   ]
 }

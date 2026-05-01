@@ -86,12 +86,36 @@ router.put('/profile', authenticate, async (req, res) => {
   }
 });
 
-// GET /api/auth/users (admin only - list all users)
+// GET /api/auth/users (list all users — authenticated)
 router.get('/users', authenticate, (req, res) => {
   try {
-    const { filter: dbFilter, getAll } = require('../db');
+    const { getAll } = require('../db');
     const users = getAll('users').map(({ password: _, ...u }) => u);
     return res.json({ success: true, data: users });
+  } catch (err) {
+    return res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+// PUT /api/auth/password — change password (requires current password)
+router.put('/password', authenticate, async (req, res) => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+    if (!currentPassword || !newPassword) {
+      return res.status(400).json({ success: false, message: 'currentPassword and newPassword are required' });
+    }
+    if (newPassword.length < 6) {
+      return res.status(400).json({ success: false, message: 'New password must be at least 6 characters' });
+    }
+    const { findOne: find } = require('../db');
+    const freshUser = find('users', (u) => u.id === req.user.id);
+    const isMatch = await bcrypt.compare(currentPassword, freshUser.password);
+    if (!isMatch) {
+      return res.status(401).json({ success: false, message: 'Current password is incorrect' });
+    }
+    const hashed = await bcrypt.hash(newPassword, 10);
+    update('users', req.user.id, { password: hashed });
+    return res.json({ success: true, message: 'Password updated successfully' });
   } catch (err) {
     return res.status(500).json({ success: false, message: 'Server error' });
   }

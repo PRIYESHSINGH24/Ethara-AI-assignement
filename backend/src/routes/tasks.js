@@ -18,38 +18,81 @@ function isProjectAdmin(userId, projectId, globalRole) {
   return m && m.role === 'admin';
 }
 
-// GET /api/tasks - get tasks for current user (assigned to or created by)
+// GET /api/tasks
+// Query params: projectId, status, priority, assigneeId, search, page, limit, sortBy, sortOrder
 router.get('/', authenticate, (req, res) => {
-  const { projectId, status, priority, assigneeId } = req.query;
+  const {
+    projectId, status, priority, assigneeId,
+    search,
+    page = '1', limit = '20',
+    sortBy = 'createdAt', sortOrder = 'desc',
+  } = req.query;
+
   let tasks = getAll('tasks');
 
+  // Scope to user's projects for non-admins
   if (req.user.role !== 'admin') {
-    // Members see tasks in their projects
     const myProjects = filter('projectMembers', (m) => m.userId === req.user.id).map((m) => m.projectId);
     tasks = tasks.filter((t) => myProjects.includes(t.projectId));
   }
 
+  // Filters
   if (projectId) tasks = tasks.filter((t) => t.projectId === projectId);
-  if (status) tasks = tasks.filter((t) => t.status === status);
-  if (priority) tasks = tasks.filter((t) => t.priority === priority);
+  if (status)    tasks = tasks.filter((t) => t.status === status);
+  if (priority)  tasks = tasks.filter((t) => t.priority === priority);
   if (assigneeId) tasks = tasks.filter((t) => t.assigneeId === assigneeId);
 
+  // Full-text search across title, description, tags
+  if (search) {
+    const q = search.toLowerCase().trim();
+    tasks = tasks.filter((t) =>
+      t.title.toLowerCase().includes(q) ||
+      (t.description && t.description.toLowerCase().includes(q)) ||
+      (t.tags && t.tags.some((tag) => tag.toLowerCase().includes(q)))
+    );
+  }
+
+  // Sorting
+  const SORTABLE = ['createdAt', 'updatedAt', 'dueDate', 'priority', 'title'];
+  const field = SORTABLE.includes(sortBy) ? sortBy : 'createdAt';
+  const dir = sortOrder === 'asc' ? 1 : -1;
+  const PRIORITY_ORDER = { low: 1, medium: 2, high: 3, urgent: 4 };
+  tasks.sort((a, b) => {
+    const av = field === 'priority' ? PRIORITY_ORDER[a[field]] : a[field];
+    const bv = field === 'priority' ? PRIORITY_ORDER[b[field]] : b[field];
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    return av < bv ? -dir : av > bv ? dir : 0;
+  });
+
+  // Pagination
+  const totalCount = tasks.length;
+  const pageNum = Math.max(1, parseInt(page, 10) || 1);
+  const pageSize = Math.min(100, Math.max(1, parseInt(limit, 10) || 20));
+  const totalPages = Math.ceil(totalCount / pageSize);
+  tasks = tasks.slice((pageNum - 1) * pageSize, pageNum * pageSize);
+
+  // Enrich
   const enriched = tasks.map((task) => {
     const assignee = task.assigneeId ? getById('users', task.assigneeId) : null;
-    const creator = getById('users', task.createdBy);
-    const project = getById('projects', task.projectId);
+    const creator  = getById('users', task.createdBy);
+    const project  = getById('projects', task.projectId);
     const commentCount = filter('comments', (c) => c.taskId === task.id).length;
     return {
       ...task,
       assignee: assignee ? { id: assignee.id, name: assignee.name, avatar: assignee.avatar } : null,
-      creator: creator ? { id: creator.id, name: creator.name } : null,
-      project: project ? { id: project.id, name: project.name, color: project.color } : null,
+      creator:  creator  ? { id: creator.id,  name: creator.name }  : null,
+      project:  project  ? { id: project.id,  name: project.name, color: project.color } : null,
       commentCount,
       isOverdue: task.dueDate && task.status !== 'done' && new Date(task.dueDate) < new Date(),
     };
   });
 
-  return res.json({ success: true, data: enriched.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) });
+  return res.json({
+    success: true,
+    data: enriched,
+    meta: { total: totalCount, page: pageNum, limit: pageSize, totalPages },
+  });
 });
 
 // POST /api/tasks
