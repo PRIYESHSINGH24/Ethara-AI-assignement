@@ -1,4 +1,4 @@
-# Qphoria — Team Task Manager 🚀
+# Qphoria — Team Task Manager
 
 A full-stack team task manager with role-based access control, Kanban boards, real-time dashboards, and a premium dark UI.
 
@@ -34,16 +34,16 @@ npm run dev
 
 ## Features
 
-- ✅ **Authentication** — Signup/Login with JWT, role selection (Admin/Member)
-- ✅ **Projects** — Create, edit, delete projects with color coding and progress tracking
-- ✅ **Kanban Board** — Drag-free status columns (Todo → In Progress → Review → Done)
-- ✅ **Tasks** — Full CRUD with priority, due date, tags, assignee, estimated hours
-- ✅ **Comments** — Threaded discussion on each task
-- ✅ **Dashboard** — Pie chart, bar chart, stat cards, recent tasks, project progress
-- ✅ **Notifications** — Real-time bell with unread count
-- ✅ **Role-Based Access** — Admin can create projects, manage members; Members can create/update tasks
-- ✅ **Activity Log** — Per-project action history
-- ✅ **Admin Panel** — User management table with search
+- Authentication — Signup/Login with JWT, role selection (Admin/Member)
+- Projects — Create, edit, delete projects with color coding and progress tracking
+- Kanban Board — Status columns (Todo, In Progress, Review, Done)
+- Tasks — Full CRUD with priority, due date, tags, assignee, estimated hours
+- Comments — Threaded discussion on each task
+- Dashboard — Pie chart, bar chart, stat cards, recent tasks, project progress
+- Notifications — Bell icon with unread count
+- Role-Based Access — Admin can create projects and manage members; Members can create and update tasks
+- Activity Log — Per-project action history
+- Admin Panel — User management table with search
 
 ## API Endpoints
 
