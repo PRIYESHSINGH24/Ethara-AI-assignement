@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { CheckSquare, Clock, AlertTriangle, TrendingUp, FolderKanban, Users, Activity, ArrowRight, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../lib/api';
-import { DashboardStats, Task, Project } from '../../types';
+import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
+import type { DashboardStats, Task, Project } from '../types';
 import { format, isPast, parseISO } from 'date-fns';
 
 const container = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } };

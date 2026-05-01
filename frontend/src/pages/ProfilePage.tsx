@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, Shield, Save, Lock, Eye, EyeOff } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../lib/api';
+import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
 import toast from 'react-hot-toast';
 import { format, parseISO } from 'date-fns';
 

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, ArrowLeft, Users, Settings, Trash2, UserPlus, X, CheckSquare, Clock, Activity } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../lib/api';
-import { Project, Task, User, ActivityLog } from '../../types';
+import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
+import type { Project, Task, User, ActivityLog } from '../types';
 import toast from 'react-hot-toast';
 import { format, parseISO } from 'date-fns';
-import TaskCard from '../../components/tasks/TaskCard';
-import TaskModal from '../../components/tasks/TaskModal';
+import TaskCard from '../components/tasks/TaskCard';
+import TaskModal from '../components/tasks/TaskModal';
 
 const COLUMNS = [
   { key: 'todo', label: 'To Do', color: '#5a5a80' },

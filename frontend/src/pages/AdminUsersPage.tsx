@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Shield, User, Trash2, Search } from 'lucide-react';
-import api from '../../lib/api';
-import { User as UserType } from '../../types';
+import api from '../lib/api';
+import type { User as UserType } from '../types';
 import toast from 'react-hot-toast';
 import { format, parseISO } from 'date-fns';
 

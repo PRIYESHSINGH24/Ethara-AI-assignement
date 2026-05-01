@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
-import { Notification } from '../../types';
+import type { Notification } from '../../types';
 import toast from 'react-hot-toast';
 
 const navItems = [

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { X, Tag } from 'lucide-react';
-import { Task, User } from '../../types';
+import type { Task, User } from '../../types';
 
 interface Props {
   open: boolean;

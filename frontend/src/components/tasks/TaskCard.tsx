@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, MessageSquare, AlertTriangle, ChevronRight, MoreVertical, Edit3, Trash2 } from 'lucide-react';
-import { Task, User } from '../../types';
+import type { Task, User } from '../../types';
 import { format, parseISO } from 'date-fns';
 import { useState, useRef, useEffect } from 'react';
 

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Search, FolderKanban, Users, CheckSquare, Trash2, Edit3, X, Calendar } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../lib/api';
-import { Project } from '../../types';
+import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
+import type { Project } from '../types';
 import toast from 'react-hot-toast';
 import { format, parseISO } from 'date-fns';
 

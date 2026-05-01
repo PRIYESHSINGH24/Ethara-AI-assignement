@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Filter, Search, CheckSquare, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../lib/api';
-import { Task, Project } from '../../types';
+import { useAuth } from '../context/AuthContext';
+import api from '../lib/api';
+import type { Task, Project } from '../types';
 import toast from 'react-hot-toast';
 import { format, parseISO } from 'date-fns';
-import TaskModal from '../../components/tasks/TaskModal';
+import TaskModal from '../components/tasks/TaskModal';
 
 const PRIORITY_COLOR: Record<string, string> = { low: 'var(--accent-green)', medium: 'var(--accent-cyan)', high: 'var(--accent-orange)', urgent: 'var(--accent-red)' };
 const STATUS_BADGE: Record<string, string> = { todo: 'badge-purple', in_progress: 'badge-cyan', review: 'badge-orange', done: 'badge-green' };
