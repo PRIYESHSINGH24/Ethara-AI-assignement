@@ -80,6 +80,15 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// ── Root redirect (for direct backend access) ─────────────────
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Qphoria API — visit /api/health for status. Frontend runs on port 80.',
+    docs: '/api/health',
+  });
+});
+
 // ── 404 ───────────────────────────────────────────────────────
 app.use((req, res) => {
   res.status(404).json({ success: false, message: `Route ${req.method} ${req.path} not found` });

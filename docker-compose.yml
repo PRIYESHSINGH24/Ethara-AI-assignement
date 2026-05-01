@@ -1,4 +1,4 @@
-version: '3.9'
+# docker-compose.yml — no 'version' field needed (Compose v2+)
 
 # ─────────────────────────────────────────────────────────────────
 #  Qphoria — Team Task Manager
@@ -36,7 +36,7 @@ services:
     networks:
       - qphoria_net
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:5001/api/health"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:5001/api/health"]
       interval: 30s
       timeout: 5s
       retries: 3
@@ -61,7 +61,7 @@ services:
     networks:
       - qphoria_net
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost/index.html"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/index.html"]
       interval: 30s
       timeout: 5s
       retries: 3
