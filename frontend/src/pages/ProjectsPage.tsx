@@ -137,6 +137,26 @@ export default function ProjectsPage() {
         )}
       </div>
 
+      {/* Metric strip */}
+      {projects.length > 0 && (
+        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+          style={{ display: 'flex', gap: 12, marginBottom: 24, flexWrap: 'wrap' }}
+        >
+          {[
+            { label: 'Total', value: projects.length, color: 'var(--accent-primary)' },
+            { label: 'Total Tasks', value: projects.reduce((a, p) => a + (p.taskCount || 0), 0), color: 'var(--accent-cyan)' },
+            { label: 'Completed', value: projects.reduce((a, p) => a + (p.completedTasks || 0), 0), color: 'var(--accent-green)' },
+            { label: 'Members', value: projects.reduce((a, p) => a + (p.memberCount || 0), 0), color: 'var(--accent-pink)' },
+          ].map((m, i) => (
+            <div key={i} style={{ background: 'var(--bg-glass)', border: `1px solid ${m.color}25`, borderRadius: 12, padding: '10px 18px', backdropFilter: 'blur(12px)', display: 'flex', alignItems: 'center', gap: 10 }}>
+              <div style={{ width: 8, height: 8, borderRadius: '50%', background: m.color, boxShadow: `0 0 8px ${m.color}` }} />
+              <span style={{ fontWeight: 800, fontSize: '1.05rem', color: m.color }}>{m.value}</span>
+              <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{m.label}</span>
+            </div>
+          ))}
+        </motion.div>
+      )}
+
       <div className="search-bar" style={{ marginBottom: 24, maxWidth: 400 }}>
         <Search size={16} style={{ color: 'var(--text-muted)' }} />
         <input placeholder="Search projects..." value={search} onChange={(e) => setSearch(e.target.value)} />
@@ -158,9 +178,14 @@ export default function ProjectsPage() {
               const progress = p.taskCount ? Math.round(((p.completedTasks || 0) / p.taskCount) * 100) : 0;
               return (
                 <motion.div key={p.id} layout initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95 }} transition={{ delay: i * 0.05 }}
-                  className="card" style={{ cursor: 'pointer', overflow: 'hidden', position: 'relative' }}>
-                  {/* Color accent top */}
-                  <div style={{ height: 4, background: p.color, position: 'absolute', top: 0, left: 0, right: 0 }} />
+                  className="card" style={{ cursor: 'pointer', overflow: 'hidden', position: 'relative' }}
+                  whileHover={{ y: -4, boxShadow: `0 12px 40px ${p.color}25, 0 0 0 1px ${p.color}30` }}
+                >
+                  {/* Animated gradient top bar */}
+                  <motion.div style={{ height: 3, background: `linear-gradient(90deg, ${p.color}, ${p.color}88)`, position: 'absolute', top: 0, left: 0, right: 0 }}
+                    animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
+                    transition={{ duration: 3, repeat: Infinity }}
+                  />
 
                   <div className="card-body" style={{ paddingTop: 28 }} onClick={() => navigate(`/projects/${p.id}`)}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 12 }}>
