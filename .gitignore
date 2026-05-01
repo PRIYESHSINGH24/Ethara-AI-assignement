@@ -6,3 +6,6 @@ node_modules/
 dist/
 build/
 data/db.json
+
+# Docker — keep Dockerfiles and compose tracked, exclude local overrides
+docker-compose.override.yml
