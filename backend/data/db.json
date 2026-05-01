@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "00690202-199f-4576-a156-63e16eb8f092",
+      "createdAt": "2026-05-01T14:48:54.446Z",
+      "updatedAt": "2026-05-01T14:48:54.446Z",
+      "name": "Alex Admin",
+      "email": "admin@qphoria.dev",
+      "password": "$2b$12$A7T4q3078a9dTkU9waD.L.1.PmnLUOVSg1idHLK9QYX1I9XxFKEde",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex%20Admin",
+      "bio": "",
+      "isActive": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "47125eab-8f92-437f-be1d-71d265ea1a77",
+      "createdAt": "2026-05-01T14:48:54.470Z",
+      "updatedAt": "2026-05-01T14:48:54.470Z",
+      "name": "Website Redesign",
+      "description": "Full site overhaul",
+      "color": "#6C5CE7",
+      "dueDate": null,
+      "priority": "high",
+      "status": "active",
+      "createdBy": "00690202-199f-4576-a156-63e16eb8f092"
+    }
+  ],
+  "tasks": [],
+  "comments": [],
+  "notifications": [],
+  "projectMembers": [
+    {
+      "id": "e0be9cfd-6fde-4c24-9cdf-235b12d00ab5",
+      "createdAt": "2026-05-01T14:48:54.471Z",
+      "updatedAt": "2026-05-01T14:48:54.471Z",
+      "projectId": "47125eab-8f92-437f-be1d-71d265ea1a77",
+      "userId": "00690202-199f-4576-a156-63e16eb8f092",
+      "role": "admin"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "75fd9f78-b0bc-4b91-8443-15bd0abf1bfa",
+      "createdAt": "2026-05-01T14:48:54.471Z",
+      "updatedAt": "2026-05-01T14:48:54.471Z",
+      "projectId": "47125eab-8f92-437f-be1d-71d265ea1a77",
+      "userId": "00690202-199f-4576-a156-63e16eb8f092",
+      "action": "project_created",
+      "details": "Project \"Website Redesign\" created"
+    }
+  ]
+}
