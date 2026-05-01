@@ -9,6 +9,7 @@ import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
 import type { Notification } from '../../types';
 import toast from 'react-hot-toast';
+import ParticleBackground from '../ParticleBackground';
 
 const navItems = [
   { to: '/dashboard', icon: <LayoutDashboard size={18} />, label: 'Dashboard' },
@@ -67,7 +68,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const initials = user?.name?.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2) || 'U';
 
   return (
-    <div className="app-layout">
+    <div className="app-layout" style={{ position: 'relative' }}>
+      {/* Global animated background */}
+      <ParticleBackground />
+      <div className="bg-orb bg-orb-1" />
+      <div className="bg-orb bg-orb-2" />
+      <div className="bg-orb bg-orb-3" />
+      <div className="bg-grid" />
       {/* Sidebar */}
       <AnimatePresence>
         {sidebarOpen && (
@@ -79,12 +86,16 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             {/* Logo */}
             <div className="sidebar-logo">
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Zap size={18} color="white" />
-                </div>
+                <motion.div
+                  animate={{ boxShadow: ['0 0 10px rgba(108,92,231,0.4)', '0 0 25px rgba(108,92,231,0.8)', '0 0 10px rgba(108,92,231,0.4)'] }}
+                  transition={{ duration: 2.5, repeat: Infinity }}
+                  style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                >
+                  <Zap size={18} color="white" fill="white" />
+                </motion.div>
                 <div>
-                  <div style={{ fontWeight: 800, fontSize: '1rem' }}>Qphoria</div>
-                  <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>Task Manager</div>
+                  <div className="logo-gradient" style={{ fontWeight: 900, fontSize: '1.05rem' }}>Qphoria</div>
+                  <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>TASK MANAGER</div>
                 </div>
               </div>
             </div>
@@ -129,7 +140,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       </AnimatePresence>
 
       {/* Main */}
-      <div className="main-content">
+      <div className="main-content" style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
         <header className="app-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
