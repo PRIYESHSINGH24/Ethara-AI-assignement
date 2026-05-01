@@ -3,13 +3,14 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   LayoutDashboard, FolderKanban, CheckSquare, Bell, User,
-  LogOut, Zap, ChevronDown, Settings, Menu, X
+  LogOut, ChevronDown, Settings, Menu, X
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../lib/api';
 import type { Notification } from '../../types';
 import toast from 'react-hot-toast';
 import ParticleBackground from '../ParticleBackground';
+import Logo from '../Logo';
 
 const navItems = [
   { to: '/dashboard', icon: <LayoutDashboard size={18} />, label: 'Dashboard' },
@@ -85,19 +86,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           >
             {/* Logo */}
             <div className="sidebar-logo">
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <motion.div
-                  animate={{ boxShadow: ['0 0 10px rgba(108,92,231,0.4)', '0 0 25px rgba(108,92,231,0.8)', '0 0 10px rgba(108,92,231,0.4)'] }}
-                  transition={{ duration: 2.5, repeat: Infinity }}
-                  style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                >
-                  <Zap size={18} color="white" fill="white" />
-                </motion.div>
-                <div>
-                  <div className="logo-gradient" style={{ fontWeight: 900, fontSize: '1.05rem' }}>Qphoria</div>
-                  <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>TASK MANAGER</div>
-                </div>
-              </div>
+              <Logo size={36} textSize="1rem" subtitle />
             </div>
 
             {/* Nav */}

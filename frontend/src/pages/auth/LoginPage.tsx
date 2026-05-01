@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Eye, EyeOff, Zap, CheckCircle, Users, BarChart3, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, CheckCircle, Users, BarChart3, ArrowRight } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 import ParticleBackground from '../../components/ParticleBackground';
+import Logo from '../../components/Logo';
 
 const features = [
   { icon: <CheckCircle size={18} />, text: 'Task assignment & tracking', color: 'var(--accent-cyan)' },
@@ -54,14 +55,8 @@ export default function LoginPage() {
         <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} style={{ maxWidth: 500, width: '100%', position: 'relative', zIndex: 1 }}>
 
           {/* Logo */}
-          <motion.div className="flex items-center gap-2" style={{ marginBottom: 48 }} whileHover={{ scale: 1.02 }}>
-            <motion.div
-              animate={{ rotate: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ width: 48, height: 48, borderRadius: 14, background: 'var(--gradient-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 30px rgba(108,92,231,0.5)' }}
-            >
-              <Zap size={24} color="white" fill="white" />
-            </motion.div>
-            <span className="logo-gradient" style={{ fontSize: '1.6rem', fontWeight: 900 }}>Qphoria</span>
+          <motion.div style={{ marginBottom: 48 }} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+            <Logo size={52} textSize="1.8rem" subtitle />
           </motion.div>
 
           <h1 style={{ marginBottom: 16, lineHeight: 1.15 }}>
@@ -121,9 +116,7 @@ export default function LoginPage() {
 
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                <div style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(108,92,231,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Zap size={18} color="var(--accent-secondary)" />
-                </div>
+                <Logo size={32} showText={false} />
                 <h2 style={{ fontSize: '1.5rem' }}>Sign in</h2>
               </div>
               <p style={{ color: 'var(--text-secondary)', marginBottom: 28, fontSize: '0.9rem' }}>Welcome back! Enter your credentials to continue.</p>
