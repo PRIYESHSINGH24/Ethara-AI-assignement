@@ -19,8 +19,19 @@ app.use(helmet({
 }));
 
 // ── CORS ──────────────────────────────────────────────────────
+const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost,http://localhost:5173')
+  .split(',').map((o) => o.trim());
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    // Allow requests with no origin (mobile apps, curl, health checks)
+    if (!origin) return callback(null, true);
+    // Allow if origin matches any allowed origin or is a Railway/Render URL
+    if (allowedOrigins.includes(origin) || origin.endsWith('.railway.app') || origin.endsWith('.onrender.com')) {
+      return callback(null, true);
+    }
+    callback(new Error(`CORS blocked: ${origin}`));
+  },
   credentials: true,
 }));
 
