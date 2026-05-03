@@ -150,7 +150,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
               <AnimatePresence>
                 {showNotif && (
-                  <motion.div className="dropdown-menu" style={{ width: 320 }} initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}>
+                  <motion.div className="dropdown-menu"
+                    style={{ width: 340, maxHeight: 480, overflowY: 'auto', right: 0 }}
+                    initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                    transition={{ duration: 0.15 }}
+                  >
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px 12px' }}>
                       <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Notifications</span>
                       {unreadCount > 0 && <button className="btn btn-ghost btn-sm" onClick={markAllRead} style={{ fontSize: '0.75rem' }}>Mark all read</button>}

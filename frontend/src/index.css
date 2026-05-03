@@ -339,6 +339,7 @@ a:hover { color: var(--text-primary); }
   background: var(--bg-glass); border-bottom: 1px solid var(--border-color);
   display: flex; align-items: center; justify-content: space-between;
   backdrop-filter: blur(20px); flex-shrink: 0;
+  position: relative; z-index: 500;
 }
 
 /* Auth Pages */
@@ -539,10 +540,10 @@ a:hover { color: var(--text-primary); }
 /* Dropdown */
 .dropdown { position: relative; }
 .dropdown-menu {
-  position: absolute; top: calc(100% + 8px); right: 0; z-index: 200;
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 9999;
   background: var(--bg-card); border: 1px solid var(--border-color);
   border-radius: var(--radius-md); padding: 8px; min-width: 180px;
-  box-shadow: var(--shadow-lg); animation: slideDown 0.2s ease;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(0,0,0,0.4); animation: slideDown 0.2s ease;
 }
 .dropdown-item {
   display: flex; align-items: center; gap: 10px;
