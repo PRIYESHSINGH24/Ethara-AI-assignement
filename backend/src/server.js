@@ -185,7 +185,7 @@ async function seedIfEmpty() {
   console.log('[SEED] Done — admin@qphoria.com / Admin@123 | member@qphoria.com / Member@123');
 }
 
-app.listen(PORT, async () => {
+app.listen(PORT, '0.0.0.0', async () => {
   await seedIfEmpty();
   console.log('\x1b[36m%s\x1b[0m', `
   ╔═══════════════════════════════════════╗

@@ -28,9 +28,7 @@ RUN mkdir -p /app/data && chown -R appuser:appgroup /app
 
 USER appuser
 
-EXPOSE 5001
+# No EXPOSE or HEALTHCHECK needed as Railway manages the port and performs health checks via railway.json
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
-  CMD wget -qO- http://127.0.0.1:5001/api/health || exit 1
 
 CMD ["node", "src/server.js"]
