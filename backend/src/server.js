@@ -116,7 +116,60 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
+const bcrypt = require('bcryptjs');
+const { v4: uuidv4 } = require('uuid');
+const db = require('./db');
+
+async function seedIfEmpty() {
+  const data = db.read();
+  if (data.users && data.users.length > 0) return; // already has data
+
+  console.log('[SEED] Fresh database detected — seeding demo accounts...');
+  const now = new Date().toISOString();
+  const adminPassword = await bcrypt.hash('Admin@123', 10);
+  const memberPassword = await bcrypt.hash('Member@123', 10);
+
+  const adminId = uuidv4();
+  const memberId = uuidv4();
+
+  data.users = [
+    { id: adminId, name: 'Alex Rivera', email: 'admin@qphoria.com', password: adminPassword, role: 'admin', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Alex%20Rivera', bio: '', isActive: true, createdAt: now, updatedAt: now },
+    { id: memberId, name: 'Jordan Lee', email: 'member@qphoria.com', password: memberPassword, role: 'member', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan%20Lee', bio: '', isActive: true, createdAt: now, updatedAt: now },
+  ];
+
+  // Seed 3 projects
+  const p1 = uuidv4(), p2 = uuidv4(), p3 = uuidv4();
+  data.projects = [
+    { id: p1, name: 'Qphoria Mobile App', description: 'Build iOS and Android version of Qphoria.', color: '#6c5ce7', priority: 'high', dueDate: '2026-06-30', ownerId: adminId, members: [{ userId: adminId, role: 'admin' }, { userId: memberId, role: 'member' }], createdAt: now, updatedAt: now },
+    { id: p2, name: 'Q2 Marketing Launch', description: 'Plan and execute Q2 product launch campaign.', color: '#00cec9', priority: 'urgent', dueDate: '2026-05-31', ownerId: adminId, members: [{ userId: adminId, role: 'admin' }, { userId: memberId, role: 'member' }], createdAt: now, updatedAt: now },
+    { id: p3, name: 'Backend Infrastructure', description: 'Migrate to PostgreSQL with Prisma ORM.', color: '#fd79a8', priority: 'medium', dueDate: '2026-07-15', ownerId: adminId, members: [{ userId: adminId, role: 'admin' }, { userId: memberId, role: 'member' }], createdAt: now, updatedAt: now },
+  ];
+
+  // Seed tasks
+  const mkTask = (title, projectId, assigneeId, priority, status) => ({ id: uuidv4(), title, description: '', projectId, assigneeId, createdBy: adminId, priority, status, tags: [], comments: [], dueDate: null, estimatedHours: null, completedAt: status === 'done' ? now : null, createdAt: now, updatedAt: now });
+  data.tasks = [
+    mkTask('Set up React Native project', p1, adminId, 'high', 'done'),
+    mkTask('Design system tokens', p1, memberId, 'medium', 'done'),
+    mkTask('Build authentication screens', p1, memberId, 'high', 'in_progress'),
+    mkTask('Implement push notifications', p1, adminId, 'high', 'in_progress'),
+    mkTask('Dashboard screen with charts', p1, memberId, 'medium', 'review'),
+    mkTask('App Store submission', p1, adminId, 'urgent', 'todo'),
+    mkTask('Write product launch blog post', p2, memberId, 'high', 'done'),
+    mkTask('Social media campaign', p2, memberId, 'urgent', 'in_progress'),
+    mkTask('Set up Google Ads campaign', p2, adminId, 'urgent', 'todo'),
+    mkTask('Evaluate PostgreSQL vs MongoDB', p3, adminId, 'medium', 'done'),
+    mkTask('Write Prisma schema', p3, memberId, 'high', 'in_progress'),
+    mkTask('Data migration script', p3, adminId, 'high', 'todo'),
+  ];
+
+  data.notifications = data.notifications || [];
+  data.activities = data.activities || [];
+  db.write(data);
+  console.log('[SEED] Done — admin@qphoria.com / Admin@123 | member@qphoria.com / Member@123');
+}
+
+app.listen(PORT, async () => {
+  await seedIfEmpty();
   console.log('\x1b[36m%s\x1b[0m', `
   ╔═══════════════════════════════════════╗
   ║   Qphoria Task Manager API            ║
