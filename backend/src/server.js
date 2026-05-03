@@ -120,7 +120,7 @@ const { v4: uuidv4 } = require('uuid');
 const db = require('./db');
 
 async function seedIfEmpty() {
-  const data = db.read();
+  const data = db.db; // Use the direct db object exported from db.js
   const now = new Date().toISOString();
   
   // Pre-computed bcrypt hashes (10 rounds) — stable across deploys
@@ -139,7 +139,7 @@ async function seedIfEmpty() {
     // If they exist, just ensure the passwords are correct
     admin.password = ADMIN_HASH;
     member.password = MEMBER_HASH;
-    db.write(data);
+    db.saveDB(); // Persist changes
     console.log('[SEED] Demo accounts verified and passwords synchronized.');
     return;
   }
@@ -181,7 +181,7 @@ async function seedIfEmpty() {
 
   data.notifications = data.notifications || [];
   data.activities = data.activities || [];
-  db.write(data);
+  db.saveDB();
   console.log('[SEED] Done — admin@qphoria.com / Admin@123 | member@qphoria.com / Member@123');
 }
 
