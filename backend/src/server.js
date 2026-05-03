@@ -121,17 +121,31 @@ const db = require('./db');
 
 async function seedIfEmpty() {
   const data = db.read();
-  if (data.users && data.users.length > 0) return; // already has data
-
-  console.log('[SEED] Fresh database detected — seeding demo accounts...');
   const now = new Date().toISOString();
-
+  
   // Pre-computed bcrypt hashes (10 rounds) — stable across deploys
   // Admin@123  → verified with bcrypt.compare()
   // Member@123 → verified with bcrypt.compare()
   const ADMIN_HASH  = '$2b$10$0MFS90gkYZjvnbFO894Hz.un1MgHEGnMxia0uY1IBhX8kluechYYm';
   const MEMBER_HASH = '$2b$10$U9xltlBgAtRO86Z2l7Xs7Oh2ajFmwaQ34AGFz.W90R5Cc9Vy9lXk2';
 
+  // Ensure users array exists
+  if (!data.users) data.users = [];
+
+  const admin = data.users.find(u => u.email === 'admin@qphoria.com');
+  const member = data.users.find(u => u.email === 'member@qphoria.com');
+
+  if (admin && member) {
+    // If they exist, just ensure the passwords are correct
+    admin.password = ADMIN_HASH;
+    member.password = MEMBER_HASH;
+    db.write(data);
+    console.log('[SEED] Demo accounts verified and passwords synchronized.');
+    return;
+  }
+
+  console.log('[SEED] Seeding demo accounts and initial data...');
+  
   const adminId  = uuidv4();
   const memberId = uuidv4();
 
