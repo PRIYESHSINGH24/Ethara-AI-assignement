@@ -22,14 +22,13 @@ app.use(helmet({
 const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost,http://localhost:5173')
   .split(',').map((o) => o.trim());
 
+const TRUSTED_DEPLOY_DOMAINS = ['.railway.app', '.onrender.com', '.vercel.app', '.netlify.app'];
+
 app.use(cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, curl, health checks)
     if (!origin) return callback(null, true);
-    // Allow if origin matches any allowed origin or is a Railway/Render URL
-    if (allowedOrigins.includes(origin) || origin.endsWith('.railway.app') || origin.endsWith('.onrender.com')) {
-      return callback(null, true);
-    }
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    if (TRUSTED_DEPLOY_DOMAINS.some((d) => origin.endsWith(d))) return callback(null, true);
     callback(new Error(`CORS blocked: ${origin}`));
   },
   credentials: true,
