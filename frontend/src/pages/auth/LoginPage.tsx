@@ -8,15 +8,15 @@ import ParticleBackground from '../../components/ParticleBackground';
 import Logo from '../../components/Logo';
 
 const features = [
-  { icon: <CheckCircle size={18} />, text: 'Task assignment & tracking', color: 'var(--accent-cyan)' },
-  { icon: <Users size={18} />, text: 'Role-based team management', color: 'var(--accent-pink)' },
-  { icon: <BarChart3 size={18} />, text: 'Real-time progress dashboards', color: 'var(--accent-orange)' },
+  { icon: <CheckCircle size={15} />, text: 'Task assignment & tracking', color: 'var(--accent-cyan)' },
+  { icon: <Users size={15} />, text: 'Role-based team management', color: 'var(--accent-pink)' },
+  { icon: <BarChart3 size={15} />, text: 'Real-time progress dashboards', color: 'var(--accent-orange)' },
 ];
 
 const floatingCards = [
   { emoji: '✅', title: 'Sprint completed', sub: 'Q2 milestone delivered', color: '#00b894', delay: 0 },
-  { emoji: '🔥', title: '12 tasks done today', sub: 'Team velocity +40%', color: '#6c5ce7', delay: 1.5 },
-  { emoji: '👥', title: '8 members online', sub: 'Collaboration active', color: '#fd79a8', delay: 3 },
+  { emoji: '🔥', title: '12 tasks done today', sub: 'Team velocity +40%', color: '#6c5ce7', delay: 1.2 },
+  { emoji: '👥', title: '8 members online', sub: 'Collaboration active', color: '#fd79a8', delay: 2.4 },
 ];
 
 export default function LoginPage() {
@@ -44,96 +44,108 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <ParticleBackground />
-      {/* Animated orbs */}
       <div className="bg-orb bg-orb-1" />
       <div className="bg-orb bg-orb-2" />
       <div className="bg-orb bg-orb-3" />
       <div className="bg-grid" />
 
-      {/* LEFT — branding */}
+      {/* ── LEFT PANEL ─────────────────────────────────────── */}
       <div className="auth-left">
-        <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }} style={{ maxWidth: 500, width: '100%', position: 'relative', zIndex: 1 }}>
-
+        <motion.div
+          initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7 }}
+          style={{ maxWidth: 480, width: '100%', position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: 20 }}
+        >
           {/* Logo */}
-          <motion.div style={{ marginBottom: 48 }} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-            <Logo size={52} textSize="1.8rem" subtitle />
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+            <Logo size={44} textSize="1.5rem" subtitle />
           </motion.div>
 
-          <h1 style={{ marginBottom: 16, lineHeight: 1.15 }}>
-            Manage teams,<br />
-            <span className="glow-text">ship faster.</span>
-          </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', marginBottom: 40, lineHeight: 1.8 }}>
-            The modern task manager built for ambitious teams. Organize, track, and deliver — all in one place.
-          </p>
+          {/* Headline */}
+          <div>
+            <h1 style={{ marginBottom: 8, lineHeight: 1.15, fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)' }}>
+              Manage teams,<br />
+              <span className="glow-text">ship faster.</span>
+            </h1>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: 1.7, margin: 0 }}>
+              The modern task manager built for ambitious teams. Organize, track, and deliver — all in one place.
+            </p>
+          </div>
 
           {/* Feature pills */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {features.map((f, i) => (
               <motion.div
-                key={i} initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 + i * 0.12 }}
-                className="flex items-center gap-3"
-                style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 12, padding: '12px 16px', backdropFilter: 'blur(10px)' }}
+                key={i} initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 + i * 0.1 }}
+                style={{ display: 'flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 10, padding: '9px 14px', backdropFilter: 'blur(10px)' }}
               >
-                <div style={{ color: f.color, background: `${f.color}18`, padding: 8, borderRadius: 8, display: 'flex' }}>{f.icon}</div>
-                <span style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>{f.text}</span>
-                <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, delay: i * 0.5, repeat: Infinity }} style={{ width: 6, height: 6, borderRadius: '50%', background: f.color, marginLeft: 'auto', boxShadow: `0 0 8px ${f.color}` }} />
+                <div style={{ color: f.color, background: `${f.color}18`, padding: 6, borderRadius: 7, display: 'flex', flexShrink: 0 }}>{f.icon}</div>
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>{f.text}</span>
+                <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2, delay: i * 0.5, repeat: Infinity }}
+                  style={{ width: 5, height: 5, borderRadius: '50%', background: f.color, marginLeft: 'auto', boxShadow: `0 0 6px ${f.color}`, flexShrink: 0 }} />
               </motion.div>
             ))}
           </div>
 
           {/* Floating activity cards */}
-          <div style={{ marginTop: 48, display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {floatingCards.map((card, i) => (
               <motion.div
                 key={i}
-                animate={{ y: [0, -6, 0] }}
+                animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3 + i, repeat: Infinity, ease: 'easeInOut', delay: card.delay }}
-                style={{ background: 'rgba(20,20,40,0.8)', border: `1px solid ${card.color}22`, borderRadius: 14, padding: '12px 16px', backdropFilter: 'blur(20px)', display: 'flex', alignItems: 'center', gap: 12, width: 'fit-content' }}
+                style={{ background: 'rgba(20,20,40,0.8)', border: `1px solid ${card.color}22`, borderRadius: 12, padding: '9px 14px', backdropFilter: 'blur(20px)', display: 'flex', alignItems: 'center', gap: 10, width: 'fit-content' }}
               >
-                <span style={{ fontSize: '1.2rem' }}>{card.emoji}</span>
+                <span style={{ fontSize: '1rem' }}>{card.emoji}</span>
                 <div>
-                  <div style={{ fontSize: '0.82rem', fontWeight: 600 }}>{card.title}</div>
-                  <div style={{ fontSize: '0.74rem', color: card.color }}>{card.sub}</div>
+                  <div style={{ fontSize: '0.78rem', fontWeight: 600 }}>{card.title}</div>
+                  <div style={{ fontSize: '0.7rem', color: card.color }}>{card.sub}</div>
                 </div>
-                <div style={{ width: 8, height: 8, borderRadius: '50%', background: card.color, boxShadow: `0 0 10px ${card.color}`, marginLeft: 8 }} />
+                <div style={{ width: 6, height: 6, borderRadius: '50%', background: card.color, boxShadow: `0 0 8px ${card.color}`, marginLeft: 6, flexShrink: 0 }} />
               </motion.div>
             ))}
           </div>
         </motion.div>
       </div>
 
-      {/* RIGHT — form */}
+      {/* ── RIGHT PANEL ────────────────────────────────────── */}
       <div className="auth-right" style={{ position: 'relative', zIndex: 1 }}>
-        {/* Inner orb */}
-        <div style={{ position: 'absolute', top: '20%', right: '10%', width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(108,92,231,0.1) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: '15%', right: '8%', width: 180, height: 180, borderRadius: '50%', background: 'radial-gradient(circle, rgba(108,92,231,0.1) 0%, transparent 70%)', filter: 'blur(40px)', pointerEvents: 'none' }} />
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="auth-box">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
+          className="auth-box"
+        >
           <div className="auth-card" style={{ position: 'relative', overflow: 'hidden' }}>
-            {/* Card top glow line */}
+            {/* Top gradient line */}
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg, var(--accent-primary), var(--accent-cyan), var(--accent-pink))', borderRadius: '24px 24px 0 0' }} />
 
+            {/* Card header */}
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-                <Logo size={32} showText={false} />
-                <h2 style={{ fontSize: '1.5rem' }}>Sign in</h2>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+                <Logo size={28} showText={false} />
+                <h2 style={{ fontSize: '1.35rem', margin: 0 }}>Sign in</h2>
               </div>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: 28, fontSize: '0.9rem' }}>Welcome back! Enter your credentials to continue.</p>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: 20, fontSize: '0.85rem' }}>
+                Welcome back! Enter your credentials to continue.
+              </p>
             </motion.div>
 
-            <form onSubmit={handleSubmit}>
-              <motion.div className="form-group" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <motion.div className="form-group" style={{ margin: 0 }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
                 <label className="form-label">Email Address</label>
-                <input type="email" className="form-input" placeholder="you@company.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoFocus />
+                <input type="email" className="form-input" placeholder="you@company.com"
+                  value={email} onChange={(e) => setEmail(e.target.value)} required autoFocus />
               </motion.div>
 
-              <motion.div className="form-group" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
+              <motion.div className="form-group" style={{ margin: 0 }} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55 }}>
                 <label className="form-label">Password</label>
                 <div style={{ position: 'relative' }}>
-                  <input type={showPass ? 'text' : 'password'} className="form-input" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required style={{ paddingRight: 44 }} />
-                  <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer' }}>
-                    {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
+                  <input type={showPass ? 'text' : 'password'} className="form-input" placeholder="••••••••"
+                    value={password} onChange={(e) => setPassword(e.target.value)} required style={{ paddingRight: 44 }} />
+                  <button type="button" onClick={() => setShowPass(!showPass)}
+                    style={{ position: 'absolute', right: 12, top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: 4 }}>
+                    {showPass ? <EyeOff size={15} /> : <Eye size={15} />}
                   </button>
                 </div>
               </motion.div>
@@ -141,24 +153,24 @@ export default function LoginPage() {
               <motion.button
                 type="submit" className="btn btn-primary btn-full btn-lg"
                 disabled={loading} whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }}
-                style={{ marginTop: 8, position: 'relative', overflow: 'hidden' }}
+                style={{ marginTop: 4, position: 'relative', overflow: 'hidden' }}
                 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
               >
                 {loading
-                  ? <><div className="spinner" style={{ width: 18, height: 18 }} /> Signing in...</>
-                  : <><span>Sign In</span><ArrowRight size={16} /></>}
+                  ? <><div className="spinner" style={{ width: 17, height: 17 }} />Signing in...</>
+                  : <><span>Sign In</span><ArrowRight size={15} /></>}
                 {!loading && (
                   <motion.div
-                    style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%)', backgroundSize: '200% 100%' }}
+                    style={{ position: 'absolute', inset: 0, background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.08) 50%, transparent 60%)', backgroundSize: '200% 100%' }}
                     animate={{ backgroundPosition: ['-200% 0', '200% 0'] }}
-                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+                    transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 1 }}
                   />
                 )}
               </motion.button>
             </form>
 
-            <div className="divider" style={{ margin: '24px 0' }} />
-            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.88rem' }}>
+            <div className="divider" style={{ margin: '18px 0' }} />
+            <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.85rem', margin: 0 }}>
               Don't have an account?{' '}
               <Link to="/signup" style={{ color: 'var(--accent-secondary)', fontWeight: 700 }}>Sign up free →</Link>
             </p>
