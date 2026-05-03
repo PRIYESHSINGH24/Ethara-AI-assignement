@@ -116,7 +116,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-const bcrypt = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 const db = require('./db');
 
@@ -126,15 +125,19 @@ async function seedIfEmpty() {
 
   console.log('[SEED] Fresh database detected — seeding demo accounts...');
   const now = new Date().toISOString();
-  const adminPassword = await bcrypt.hash('Admin@123', 10);
-  const memberPassword = await bcrypt.hash('Member@123', 10);
 
-  const adminId = uuidv4();
+  // Pre-computed bcrypt hashes (10 rounds) — stable across deploys
+  // Admin@123  → verified with bcrypt.compare()
+  // Member@123 → verified with bcrypt.compare()
+  const ADMIN_HASH  = '$2b$10$0MFS90gkYZjvnbFO894Hz.un1MgHEGnMxia0uY1IBhX8kluechYYm';
+  const MEMBER_HASH = '$2b$10$U9xltlBgAtRO86Z2l7Xs7Oh2ajFmwaQ34AGFz.W90R5Cc9Vy9lXk2';
+
+  const adminId  = uuidv4();
   const memberId = uuidv4();
 
   data.users = [
-    { id: adminId, name: 'Alex Rivera', email: 'admin@qphoria.com', password: adminPassword, role: 'admin', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Alex%20Rivera', bio: '', isActive: true, createdAt: now, updatedAt: now },
-    { id: memberId, name: 'Jordan Lee', email: 'member@qphoria.com', password: memberPassword, role: 'member', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan%20Lee', bio: '', isActive: true, createdAt: now, updatedAt: now },
+    { id: adminId, name: 'Alex Rivera', email: 'admin@qphoria.com', password: ADMIN_HASH, role: 'admin', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Alex%20Rivera', bio: '', isActive: true, createdAt: now, updatedAt: now },
+    { id: memberId, name: 'Jordan Lee', email: 'member@qphoria.com', password: MEMBER_HASH, role: 'member', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Jordan%20Lee', bio: '', isActive: true, createdAt: now, updatedAt: now },
   ];
 
   // Seed 3 projects
